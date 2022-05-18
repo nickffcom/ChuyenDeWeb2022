@@ -10,29 +10,29 @@ export default function Footer() {
                             <img className="logo1" src="images/logo1.png" alt="#" />
                             <ul className="social_icon">
                                 <li>
-                                    <a href="#">
+                                    <a href="fb.com/noname2d">
                                         <i className="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="fb.com/noname2d">
                                         <i className="fa fa-twitter" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="fb.com/noname2d">
                                         <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="fb.com/noname2d">
                                         <i className="fa fa-instagram" aria-hidden="true"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <h3>About Us</h3>
+                            <h3>Về chúng tôi</h3>
                             <ul className="about_us">
                                 <li>
                                     dolor sit amet, consectetur
@@ -42,7 +42,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                            <h3>Contact Us</h3>
+                            <h3>Liên hệ</h3>
                             <ul className="conta">
                                 <li>
                                     dolor sit amet,
@@ -55,14 +55,14 @@ export default function Footer() {
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                             <form className="bottom_form">
-                                <h3>Newsletter</h3>
+                                <h3>Đăng ký để nhận các thông tin ưu đãi</h3>
                                 <input
                                     className="enter"
                                     placeholder="Enter your email"
                                     type="text"
                                     name="Enter your email"
                                 />
-                                <button className="sub_btn">subscribe</button>
+                                <button className="sub_btn">Subscribe</button>
                             </form>
                         </div>
                     </div>
@@ -72,8 +72,7 @@ export default function Footer() {
                         <div className="row">
                             <div className="col-md-12">
                                 <p>
-                                    © 2019 All Rights Reserved. Design by
-                                    <a href="https://html.design/"> Free Html Templates</a>
+                                    © 2022 design and develop by @Project CD Web Nông Lâm 
                                 </p>
                             </div>
                         </div>

@@ -7,7 +7,7 @@ export default function Customer_review() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="titlepage">
-                            <h2>Customer Review</h2>
+                            <h2>Nhận xét của khách hàng</h2>
                         </div>
                     </div>
                 </div>
@@ -29,16 +29,11 @@ export default function Customer_review() {
                                                         <i>
                                                             <img src="images/cos.png" alt="#" />
                                                         </i>
-                                                        <h4>Sandy Miller</h4>
+                                                        <h4>Hoàng Văn Hiệp</h4>
                                                         <p>
-                                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                                            irure dolor in reprehenderit in voluptate velit esse cillum
-                                                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                            cupidatat non proident, sunt in culpa qui officia deserunt
-                                                            mollit anim id
+                                                        Tôi chưa từng trải qua cảm giác thích thú và hưng phấn đến vậy khi mua hàng Online 
+                                                        Shop làm ăn rất nhiệt tình và điều quan trọng đó là giá cả rất phải chăng , hợp với tui tiền của tôi
+                                                        Cho hẳn đánh giá 9/10 , quá ổn áp sẽ còn gặp shop dài dài
                                                         </p>
                                                     </div>
                                                 </div>
@@ -55,16 +50,10 @@ export default function Customer_review() {
                                                         <i>
                                                             <img src="images/cos.png" alt="#" />
                                                         </i>
-                                                        <h4>Sandy Miller</h4>
+                                                        <h4>Nguyễn Hoàng Minh</h4>
                                                         <p>
-                                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                                            irure dolor in reprehenderit in voluptate velit esse cillum
-                                                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                            cupidatat non proident, sunt in culpa qui officia deserunt
-                                                            mollit anim id
+                                                            Là một tín đồ của thời trang , tôi đã tìm thấy những bộ trang phục đẹp mắt và giá thành cực kì bình dân 
+                                                            làm tôi thấy rất vui , sẽ là một khách hàng lâu dài của bên shop , tặng shop 10/10 sao luôn
                                                         </p>
                                                     </div>
                                                 </div>
@@ -81,16 +70,11 @@ export default function Customer_review() {
                                                         <i>
                                                             <img src="images/cos.png" alt="#" />
                                                         </i>
-                                                        <h4>Sandy Miller</h4>
+                                                        <h4>Mr Bế Lâm</h4>
                                                         <p>
-                                                            ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                                            irure dolor in reprehenderit in voluptate velit esse cillum
-                                                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                            cupidatat non proident, sunt in culpa qui officia deserunt
-                                                            mollit anim id
+                                                            Tôi là một người khó tính nhưng sau khi biết đến shop thì tôi không còn lời gì để nói nữa 
+                                                            từ cách phục vụ đến chăm sóc khách hàng , giá cả ko quan trọng đối với tôi bởi vì tôi giàu nhưng cách phục vụ 
+                                                            bên shop phải làm cho người sử dụng mê mẩn , cho hẳn 11/10 oke luôn =)))
                                                         </p>
                                                     </div>
                                                 </div>

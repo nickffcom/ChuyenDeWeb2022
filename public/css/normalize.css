@@ -30,6 +30,9 @@ nav,
 section {
   display: block;
 }
+header{
+  height: 50px;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and

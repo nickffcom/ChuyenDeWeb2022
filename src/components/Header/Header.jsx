@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export default function Header() {
     return (
-        <header>
-            {/* <!-- header inner --> */}
+        // <header>
+           
             <div className="header">
                 <div className="container-fluid">
                     <div className="row">
@@ -11,9 +11,10 @@ export default function Header() {
                             <div className="full">
                                 <div className="center-desk">
                                     <div className="logo">
-                                        <a href="index.html">
+                                        <Link to='/'>
                                             <img src="images/logo.png" alt="#" />
-                                        </a>
+                                        </Link>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -34,44 +35,39 @@ export default function Header() {
                                 <div className="collapse navbar-collapse" id="navbarsExample04">
                                     <ul className="navbar-nav mr-auto">
                                         <li className="nav-item active">
-                                            <a className="nav-link" href="index.html">
-                                                Home
-                                            </a>
+                                            <Link to='/' className='nav-link'>
+                                                Trang chủ   
+                                            </Link>
+                                         
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link" href="about.html">
-                                                About
-                                            </a>
+                                            <Link className="nav-link" to='/product'>
+                                                Cửa Hàng
+                                            </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link" href="computer.html">
-                                                Computer
-                                            </a>
+                                            <Link to='/contact' className="nav-link" >
+                                                    Liên Hệ
+                                            </Link>
+                                           
+                                       
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link" href="laptop.html">
-                                                Laptop
-                                            </a>
+                                            <Link className="nav-link" to="/info-shop">
+                                                Thông tin cửa hàng 
+                                            </Link>
+                                           
                                         </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="product.html">
-                                                Products
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="contact.html">
-                                                Contact Us
-                                            </a>
-                                        </li>
+
                                         <li className="nav-item d_none">
                                             <a className="nav-link" href="#">
                                                 <i className="fa fa-search" aria-hidden="true"></i>
                                             </a>
                                         </li>
                                         <li className="nav-item d_none">
-                                            <a className="nav-link" href="#">
-                                                Login
-                                            </a>
+                                            <Link className="nav-link" to="/login">
+                                                Đăng Nhập
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -80,6 +76,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </header>
+        // </header>
     );
 }
