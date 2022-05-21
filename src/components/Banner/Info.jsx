@@ -8,7 +8,7 @@ export default function Info({title,body,img}) {
                     <div className="col-md-6">
                         <div className="titlepage">
                             <h2>{title}</h2>
-                            <p>{body}</p>
+                            <h1>{body}</h1>
                            
                         </div>
                     </div>
