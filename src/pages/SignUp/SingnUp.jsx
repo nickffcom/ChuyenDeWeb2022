@@ -1,4 +1,4 @@
-import { Form, Input, InputNumber, Button } from 'antd';
+import { Form, Input, InputNumber, Button,Select} from 'antd';
 import React from 'react';
 import 'antd/dist/antd.css';
 import Introduce from '~/components/Banner/Introduce';
@@ -20,14 +20,15 @@ const validateMessages = {
         range: '${label} phải nằm trong khoảng ${min} và ${max}',
     },
 };
+const { Option } = Select;
 export default function SingnUp() {
-    const tailLayout = {
-        wrapperCol: { offset: 0, span: 16 },
-    };
+
     const onFinish = (values) => {
         console.log(values);
     };
+    const onGenderChange=(e)=>{
 
+    }
     return (
         <div>
             <Introduce title="Đăng ký" body="Trang chủ / Đăng ký" />
@@ -40,7 +41,7 @@ export default function SingnUp() {
                                 name={['user', 'name']}
                                 label="Họ và tên"
                                 wrapperCol={{
-                                  span:11
+                                    span: 7,
                                 }}
                                 rules={[
                                     {
@@ -54,7 +55,7 @@ export default function SingnUp() {
                                 name={['user', 'username']}
                                 label="Tài khoản đăng nhập"
                                 wrapperCol={{
-                                  span:11
+                                    span: 7,
                                 }}
                                 rules={[
                                     {
@@ -67,48 +68,65 @@ export default function SingnUp() {
                             <Form.Item
                                 name={['user', 'email']}
                                 wrapperCol={{
-                                  span:11
+                                    span: 10,
                                 }}
                                 label="Email"
                                 rules={[
                                     {
                                         type: 'email',
-                                        required:true
+                                        required: true,
                                     },
                                 ]}
                             >
                                 <Input />
                             </Form.Item>
-                        
-                            <Form.Item name={['user', 'sodienthoai']} label="Số điện thoại"
-                             labelCol={{
-                              span:4
-                            }}
-                            wrapperCol={{
-                              span:5
-                            }}
+
+                            <Form.Item
+                                name={['user', 'sodienthoai']}
+                                label="Số điện thoại"
+                                labelCol={{
+                                    span: 4,
+                                }}
+                                wrapperCol={{
+                                    span: 5,
+                                }}
+                                styles={{display:'flex'}}
                             >
                                 <Input />
+                                {/* <Form.Item
+                                   noStyle
+                                    name="gender"
+                                    label="Giới tính"
+                                    rules={[
+                                        {
+                                            required: true,
+                                        },
+                                    ]}
+                                > */}
+                                    <Select
+                                        placeholder="Vui lòng chọn giới tính"
+                                        onChange={onGenderChange}
+                                        allowClear
+                                    >
+                                        <Option value="Nam">Nam</Option>
+                                        <Option value="Nữ">Nữ</Option>
+                                        <Option value="Khác">Khác</Option>
+                                    </Select>
+                                {/* </Form.Item> */}
                             </Form.Item>
                             <Form.Item name={['user', 'address']} label="Địa chỉ">
                                 <Input.TextArea />
                             </Form.Item>
                             <Form.Item
-                              // labelCol={{
-                              //   span:0
-                              // }}
-                              // wrapperCol={{
-                              //   span:5
-                              // }}
+                                // labelCol={{
+                                //   span:0
+                                // }}
+                                // wrapperCol={{
+                                //   span:5
+                                // }}
                                 name={['user', 'password']}
                                 label="Mật khẩu"
-                                rules={[
-                                    {   required:true,
-                                        type: 'number',
-                                        min: 18,
-                                        max: 99,
-                                    },
-                                ]}
+                                rules={[{ required: true, type: 'number', min: 18, max: 99 }]}
                             >
                                 <Input.Password />
                             </Form.Item>
@@ -121,6 +139,7 @@ export default function SingnUp() {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }

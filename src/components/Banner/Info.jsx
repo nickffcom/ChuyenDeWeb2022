@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Info({title,body,img}) {
     return (
@@ -7,7 +8,10 @@ export default function Info({title,body,img}) {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="titlepage">
-                            <h2>{title}</h2>
+                            <Link to='/'>
+                                <h2>{title}</h2>
+                            </Link>
+                           
                             <h1>{body}</h1>
                            
                         </div>

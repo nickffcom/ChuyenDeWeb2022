@@ -1,6 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export default function Header() {
+    const navigate=useNavigate();
+    const [keywork,setKeyWork]=useState('');
+    console.log("keywork la",keywork);
+    useEffect(() => {
+
+        
+        (keywork)?navigate(`/search/${keywork}`):navigate('/');
+        // if(keywork){
+        //     navigate(`/search/${keywork}`);
+        // }else{
+        //     navigate('/');
+        // }
+    }, [keywork]);
+
     return (
         // <header>
            
@@ -59,10 +74,11 @@ export default function Header() {
                                            
                                         </li>
 
-                                        <li className="nav-item d_none">
-                                            <a className="nav-link" href="#">
+                                        <li className="nav-item d_none haha">
+                                            <input value={keywork} onChange={(e)=>{setKeyWork(e.target.value)}} className='search-input'/>
+                                            <div className="nav-link nav-search">
                                                 <i className="fa fa-search" aria-hidden="true"></i>
-                                            </a>
+                                            </div>
                                         </li>
                                         <li className="nav-item d_none">
                                             <Link className="nav-link" to="/login">

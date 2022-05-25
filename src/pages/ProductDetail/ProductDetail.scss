@@ -1,0 +1,16 @@
+.Price{
+    color:coral;
+}
+.status{
+    color:cyan;
+}
+.product_social{
+    display: flex;
+   
+    .product_social_icon{
+        flex: 1;
+        svg{
+            padding: 0px 10px;
+        }
+    }
+}

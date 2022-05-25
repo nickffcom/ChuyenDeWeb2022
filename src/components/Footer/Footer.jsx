@@ -35,9 +35,9 @@ export default function Footer() {
                             <h3>Về chúng tôi</h3>
                             <ul className="about_us">
                                 <li>
-                                    dolor sit amet, consectetur
-                                    <br /> magna aliqua. Ut enim ad <br />
-                                    minim veniam, <br /> quisdotempor incididunt r
+                                    Luôn luôn thấu hiểu khách hàng
+                                    <br /> hỗ trợ nhiệt tình <br />
+                                    giá rẻ, <br /> uy tín làm nên thương hiệu
                                 </li>
                             </ul>
                         </div>
@@ -45,11 +45,11 @@ export default function Footer() {
                             <h3>Liên hệ</h3>
                             <ul className="conta">
                                 <li>
-                                    dolor sit amet,
-                                    <br /> consectetur <br />
-                                    magna aliqua.
-                                    <br /> quisdotempor <br />
-                                    incididunt ut e{' '}
+                                    Ktx Khu B 
+                                    <br /> DDHQG TPHCM <br />
+                                    P.Linh Trung
+                                    <br /> Quận thủ đức <br />
+                                    Tòa nhà F2{' '}
                                 </li>
                             </ul>
                         </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                                 <h3>Đăng ký để nhận các thông tin ưu đãi</h3>
                                 <input
                                     className="enter"
-                                    placeholder="Enter your email"
+                                    placeholder="Điền email của bạn vào đây"
                                     type="text"
                                     name="Enter your email"
                                 />
