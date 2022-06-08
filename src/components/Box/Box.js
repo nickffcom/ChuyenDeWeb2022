@@ -10,11 +10,10 @@ export default function Box() {
                             <i>
                                 <img src="images/thr.png" alt="#" />
                             </i>
-                            <h3>Computer</h3>
+                            <h3>Giá thành</h3>
                             <p>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable.{' '}
+                                Được sản xuất và phân phối chính hãng tại Việt Nam nên giá thành sản phẩm luôn luôn tốt
+                                cho mọi người dùng
                             </p>
                         </div>
                     </div>
@@ -23,11 +22,10 @@ export default function Box() {
                             <i>
                                 <img src="images/thr1.png" alt="#" />
                             </i>
-                            <h3>Laptop</h3>
+                            <h3>Phục vụ</h3>
                             <p>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable.{' '}
+                                Tự tin là một trong những shop có chất lượng phục vụ online tốt nhất ! Hỗ trợ tư vấn
+                                24/7 trừ chủ nhật và ngày lễ
                             </p>
                         </div>
                     </div>
@@ -36,11 +34,10 @@ export default function Box() {
                             <i>
                                 <img src="images/thr2.png" alt="#" />
                             </i>
-                            <h3>Tablet</h3>
+                            <h3>Đổi trả</h3>
                             <p>
-                                There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable.{' '}
+                                Khi mua hàng tại shop mà không ưng ý có thể đổi trả trong vòng 3-7 ngày và sẽ được giao
+                                liền những ngày sau đó
                             </p>
                         </div>
                     </div>

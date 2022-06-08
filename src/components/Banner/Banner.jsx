@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Banner() {
     return (
@@ -24,7 +25,7 @@ export default function Banner() {
                                                 There are many variations of passages of Lorem Ipsum available, but the
                                                 majority have suffered alteration in some form, by injected humour, or{' '}
                                             </p>
-                                            <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                            <Link to="/product">Shopping Now </Link> <Link to="/contact">Contact</Link>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -50,7 +51,7 @@ export default function Banner() {
                                                 There are many variations of passages of Lorem Ipsum available, but the
                                                 majority have suffered alteration in some form, by injected humour, or{' '}
                                             </p>
-                                            <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                            <Link to="/product">Shopping Now </Link> <Link to="/contact">Contact</Link>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -76,7 +77,7 @@ export default function Banner() {
                                                 There are many variations of passages of Lorem Ipsum available, but the
                                                 majority have suffered alteration in some form, by injected humour, or{' '}
                                             </p>
-                                            <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                            <Link to="/product">Shopping Now </Link> <Link to="/contact">Contact</Link>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -102,7 +103,7 @@ export default function Banner() {
                                                 There are many variations of passages of Lorem Ipsum available, but the
                                                 majority have suffered alteration in some form, by injected humour, or{' '}
                                             </p>
-                                            <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                            <Link to="/product">Shopping Now </Link> <Link to="/contact">Contact</Link>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -128,7 +129,7 @@ export default function Banner() {
                                                 There are many variations of passages of Lorem Ipsum available, but the
                                                 majority have suffered alteration in some form, by injected humour, or{' '}
                                             </p>
-                                            <a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+                                            <Link to="/product">Shopping Now </Link> <Link to="/contact">Contact</Link>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -143,10 +144,10 @@ export default function Banner() {
                         </div>
                     </div>
                 </div>
-                <a className="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                <a className="carousel-control-prev" href="/#" role="button" data-slide="prev">
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </a>
-                <a className="carousel-control-next" href="#banner1" role="button" data-slide="next">
+                <a className="carousel-control-next" href="/#" role="button" data-slide="next">
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
             </div>

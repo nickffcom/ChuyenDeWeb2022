@@ -7,70 +7,70 @@ export default function SlideBar() {
             <div id="shop-cate-toggle" className="category-menu sidebar-menu sidbar-style">
                 <ul>
                     <li className="has-sub">
-                        <a href="#">Dành cho Nam</a>
+                        <a href="https://www.facebook.com/">Dành cho Nam</a>
                         <ul className="category-sub">
                             <li>
-                                <a href="cart.html">Áo ( Len, Khoác,Phông ,Sơ mi)</a>
+                                <a href="https://www.facebook.com/">Áo ( Len, Khoác,Phông ,Sơ mi)</a>
                             </li>
                             <li>
-                                <a href="shop.html">Quần(Kaki, Jean)</a>
+                                <a href="https://www.facebook.com/">Quần(Kaki, Jean)</a>
                             </li>
                             <li>
-                                <a href="shop.html">Combo(Ngẫu nhiên)</a>
+                                <a href="https://www.facebook.com/">Combo(Ngẫu nhiên)</a>
                             </li>
                         </ul>
                         {/* <!-- category submenu end--> */}
                     </li>
                     <li className="has-sub">
-                        <a href="#">Dành cho nữ</a>
+                        <a href="https://www.facebook.com/">Dành cho nữ</a>
                         <ul className="category-sub">
                             <li>
-                                <a href="cart.html">Áo( Ni,Khoác,Len )</a>
+                                <a href="https://www.facebook.com/">Áo( Ni,Khoác,Len )</a>
+                            </li>
+                              <li>
+                                <a href="https://www.facebook.com/">Quần</a>
                             </li>
                             <li>
-                                <a href="shop.html">Quần</a>
+                                <a href="https://www.facebook.com/">Váy Liền</a>
                             </li>
                             <li>
-                                <a href="shop.html">Váy Liền</a>
-                            </li>
-                            <li>
-                                <a href="shop.html">Combo ngẫu nhiên</a>
+                                <a href="https://www.facebook.com/">Combo ngẫu nhiên</a>
                             </li>
                         </ul>
                         {/* <!-- category submenu end--> */}
                     </li>
                     <li className="has-sub">
-                        <a href="#">Dịch Vụ</a>
+                        <a href="https://www.facebook.com/">Dịch Vụ</a>
                         <ul className="category-sub">
                             <li>
-                                <a href="shop.html">Cho Vay Trả Góp</a>
+                                <a href="https://www.facebook.com/">Cho Vay Trả Góp</a>
                             </li>
                             <li>
-                                <a href="shop.html">Đăng Kí Bảo Hiểm Xe</a>
+                                <a href="https://www.facebook.com/">Đăng Kí Bảo Hiểm Xe</a>
                             </li>
                             <li>
-                                <a href="shop.html">Làm Biển Số Theo Tỉnh</a>
+                                <a href="https://www.facebook.com/">Làm Biển Số Theo Tỉnh</a>
                             </li>
                             <li>
-                                <a href="shop.html"></a>
+                                <a href="https://www.facebook.com/">:D</a>
                             </li>
                         </ul>
                         {/* <!-- category submenu end--> */}
                     </li>
                     <li className="has-sub">
-                        <a href="#">Tin Tức Khuyến Mãi</a>
+                        <a href="https://www.facebook.com/">Tin Tức Khuyến Mãi</a>
                         <ul className="category-sub">
                             <li>
-                                <a href="shop.html">Khuyến Mãi Mới Nhất</a>
+                                <a href="https://www.facebook.com/">Khuyến Mãi Mới Nhất</a>
                             </li>
                             <li>
-                                <a href="shop.html">Sale 30% Nhân Sự Kiện 20/10</a>
+                                <a href="https://www.facebook.com/">Sale 30% Nhân Sự Kiện 20/10</a>
                             </li>
                             <li>
-                                <a href="shop.html">Giờ Vàng, Mua Xe trả góp Giá 0d</a>
+                                <a href="https://www.facebook.com/">Giờ Vàng, Mua Xe trả góp Giá 0d</a>
                             </li>
                             <li>
-                                <a href="shop.html"></a>
+                                <a href="https://www.facebook.com/">:D</a>
                             </li>
                         </ul>
                         {/* <!-- category submenu end--> */}

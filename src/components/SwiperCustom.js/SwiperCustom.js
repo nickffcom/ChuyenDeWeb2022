@@ -25,6 +25,7 @@ export default function SwiperCustom({ children }) {
                 slidesPerGroup={1}
                 loop={true}
                 loopFillGroupWithBlank={true}
+                // onPlay={true}
                 // pagination={{
                 //     clickable: false,
                 // }}
@@ -32,16 +33,33 @@ export default function SwiperCustom({ children }) {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-                <SwiperSlide><ProductItem/></SwiperSlide>
-             
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ProductItem />
+                </SwiperSlide>
             </Swiper>
         </div>
     );

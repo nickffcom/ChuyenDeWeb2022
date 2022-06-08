@@ -10,22 +10,22 @@ export default function Footer() {
                             <img className="logo1" src="images/logo1.png" alt="#" />
                             <ul className="social_icon">
                                 <li>
-                                    <a href="fb.com/noname2d">
+                                    <a href="https://www.facebook.com/noname2d/">
                                         <i className="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="fb.com/noname2d">
+                                    <a href="https://www.facebook.com/noname2d/">
                                         <i className="fa fa-twitter" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="fb.com/noname2d">
+                                    <a href="https://www.facebook.com/noname2d/">
                                         <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="fb.com/noname2d">
+                                    <a href="https://www.facebook.com/noname2d/">
                                         <i className="fa fa-instagram" aria-hidden="true"></i>
                                     </a>
                                 </li>
@@ -45,7 +45,7 @@ export default function Footer() {
                             <h3>Liên hệ</h3>
                             <ul className="conta">
                                 <li>
-                                    Ktx Khu B 
+                                    Ktx Khu B
                                     <br /> DDHQG TPHCM <br />
                                     P.Linh Trung
                                     <br /> Quận thủ đức <br />
@@ -71,9 +71,7 @@ export default function Footer() {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <p>
-                                    © 2022 design and develop by @Project CD Web Nông Lâm 
-                                </p>
+                                <p>© 2022 design and develop by @Project CD Web Nông Lâm</p>
                             </div>
                         </div>
                     </div>

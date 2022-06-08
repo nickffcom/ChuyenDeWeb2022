@@ -9,7 +9,7 @@ export default function Sale() {
                         <div className="titlepage">
                             <p>Tưng bừng khai trương</p>
                             <h2>Giảm giá cực sốc!</h2>
-                            <a className="read_more" href="#">
+                            <a className="read_more" href="javascript:void(0)">
                                 Mua ngay
                             </a>
                         </div>

@@ -1,7 +1,11 @@
-import { Form, Input, InputNumber, Button,Select} from 'antd';
+import { Form, Input, InputNumber, Button, Select, Col, Row } from 'antd';
 import React from 'react';
-import 'antd/dist/antd.css';
+import { useNavigate } from 'react-router-dom';
+// import 'antd/dist/antd.min.css';
+
 import Introduce from '~/components/Banner/Introduce';
+import { NotifyError, NotifySuccess } from '~/Utils/Notice';
+import { methodPost } from '~/Utils/Request';
 const layout = {
     labelCol: {
         span: 4,
@@ -22,13 +26,28 @@ const validateMessages = {
 };
 const { Option } = Select;
 export default function SingnUp() {
-
-    const onFinish = (values) => {
+    const navigate = useNavigate();
+    const onFinish = async (values) => {
         console.log(values);
+        try {
+            delete values.confirm;
+            delete values.address;
+            console.log('giá trị form:', values);
+            const data = await methodPost('/api/auth/signup', values);
+            console.log('data ne,', data.data);
+            if (data.data.success) {
+                NotifySuccess(data.data.message);
+                setTimeout(() => {
+                    navigate('/login');
+                }, 1500);
+            } else {
+                NotifyError(data.data.message);
+            }
+        } catch (e) {
+            console.log('lỗi signup:' + e);
+        }
     };
-    const onGenderChange=(e)=>{
-
-    }
+    const onGenderChange = (e) => {};
     return (
         <div>
             <Introduce title="Đăng ký" body="Trang chủ / Đăng ký" />
@@ -38,7 +57,8 @@ export default function SingnUp() {
                     <div className="">
                         <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
                             <Form.Item
-                                name={['user', 'name']}
+                                name="name"
+                                hasFeedback
                                 label="Họ và tên"
                                 wrapperCol={{
                                     span: 7,
@@ -47,86 +67,136 @@ export default function SingnUp() {
                                     {
                                         required: true,
                                     },
+                                    {
+                                        max: 40,
+                                    },
                                 ]}
                             >
                                 <Input />
                             </Form.Item>
                             <Form.Item
-                                name={['user', 'username']}
+                                name="username"
                                 label="Tài khoản đăng nhập"
+                                hasFeedback
                                 wrapperCol={{
                                     span: 7,
                                 }}
                                 rules={[
                                     {
                                         required: true,
+                                        type: 'string',
+                                        min: 6,
+                                        max: 18,
                                     },
                                 ]}
                             >
                                 <Input />
                             </Form.Item>
                             <Form.Item
-                                name={['user', 'email']}
+                                name="email"
                                 wrapperCol={{
                                     span: 10,
                                 }}
+                                hasFeedback
                                 label="Email"
                                 rules={[
                                     {
                                         type: 'email',
                                         required: true,
+                                        max: 40,
                                     },
                                 ]}
                             >
                                 <Input />
                             </Form.Item>
+                            <Row gutter={15}>
+                                <Col span={12} push={2}>
+                                    <Form.Item
+                                        name="phone"
+                                        label="Sdt ( Phone )"
+                                        hasFeedback
+                                        rules={[
+                                            {
+                                                required: true,
+                                                message: 'Số điện thoại bắt buộc và từ 9-11 số',
+                                                min: 9,
+                                                max: 12,
+                                            },
+                                        ]}
+                                    >
+                                        <Input type="number" />
+                                    </Form.Item>
+                                </Col>
+                                <Col span={8}>
+                                    <Form.Item
+                                        name="gender"
+                                        // label="Giới tính"
+                                        rules={[
+                                            {
+                                                required: true,
+                                            },
+                                        ]}
+                                        hasFeedback
+                                    >
+                                        <Select
+                                            placeholder="Vui lòng chọn giới tính"
+                                            onChange={onGenderChange}
+                                            allowClear
+                                        >
+                                            <Option value="Nam">Nam</Option>
+                                            <Option value="Nữ">Nữ</Option>
+                                            <Option value="Khác">Khác</Option>
+                                        </Select>
+                                    </Form.Item>
+                                </Col>
+                            </Row>
 
+                            <Form.Item name="address" label="Địa chỉ" hasFeedback>
+                                <Input.TextArea />
+                            </Form.Item>
                             <Form.Item
-                                name={['user', 'sodienthoai']}
-                                label="Số điện thoại"
                                 labelCol={{
                                     span: 4,
                                 }}
                                 wrapperCol={{
-                                    span: 5,
+                                    span: 8,
                                 }}
-                                styles={{display:'flex'}}
+                                hasFeedback
+                                name="password"
+                                label="Mật khẩu"
+                                rules={[{ required: true, type: 'string', min: 6, max: 99 }]}
                             >
-                                <Input />
-                                {/* <Form.Item
-                                   noStyle
-                                    name="gender"
-                                    label="Giới tính"
-                                    rules={[
-                                        {
-                                            required: true,
-                                        },
-                                    ]}
-                                > */}
-                                    <Select
-                                        placeholder="Vui lòng chọn giới tính"
-                                        onChange={onGenderChange}
-                                        allowClear
-                                    >
-                                        <Option value="Nam">Nam</Option>
-                                        <Option value="Nữ">Nữ</Option>
-                                        <Option value="Khác">Khác</Option>
-                                    </Select>
-                                {/* </Form.Item> */}
-                            </Form.Item>
-                            <Form.Item name={['user', 'address']} label="Địa chỉ">
-                                <Input.TextArea />
+                                <Input.Password />
                             </Form.Item>
                             <Form.Item
-                                // labelCol={{
-                                //   span:0
-                                // }}
-                                // wrapperCol={{
-                                //   span:5
-                                // }}
-                                name={['user', 'password']}
-                                label="Mật khẩu"
-                                rules={[{ required: true, type: 'number', min: 18, max: 99 }]}
+                                name="confirm"
+                                label="Xác nhận Password"
+                                dependencies={['password']}
+                                hasFeedback
+                                // hasFeedback
+                                labelCol={{
+                                    span: 4,
+                                }}
+                                wrapperCol={{
+                                    span: 8,
+                                }}
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: 'Please confirm your password!',
+                                    },
+                                    ({ getFieldValue }) => ({
+                                        validator(_, value) {
+                                            if (!value || getFieldValue('password') === value) {
+                                                return Promise.resolve();
+                                            }
+
+                                            return Promise.reject(
+                                                new Error('The two passwords that you entered do not match!'),
+                                            );
+                                        },
+                                    }),
+                                ]}
                             >
                                 <Input.Password />
                             </Form.Item>
@@ -139,7 +209,6 @@ export default function SingnUp() {
                     </div>
                 </div>
             </div>
-            
         </div>
     );
 }
