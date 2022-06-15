@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Divider, Form, InputNumber, Rate, Row, Space } from 'antd';
 
 import '~/pages/ProductDetail/ProductDetail.scss';
@@ -15,21 +15,37 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Radio, Button } from 'antd';
 import Mgtop from '~/components/MgTop/Mgtop';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route, useLocation, useParams } from 'react-router-dom';
 import MoreInformation from '~/components/ProductDetail/MoreInformation';
 import Vote from '~/components/ProductDetail/Vote';
 import Description from '~/components/ProductDetail/Description';
 import SwiperCustom from '~/components/SwiperCustom.js/SwiperCustom';
-import Avatar from '~/components/Avatar/Avatar'
+import Avatar from '~/components/Avatar/Avatar';
 import Footer from '~/components/Footer/Footer';
+import { methodGet } from '~/Utils/Request';
 export default function ProductDetail() {
+    const params = useParams();
+    const [productDetail, SetProductDetail] = useState({});
+    console.log('location là ', params);
     const onFinish = (values) => {
         console.log(values);
     };
     const initialValue = {
-        amount: 1,
-        mausac: 'xanh',
+        amount: '1',
+        mausac: productDetail?.color,
     };
+    useEffect(() => {
+        const getProductDetail = async () => {
+            const { id } = params;
+            console.log('id lấy ra là', id);
+            const rs = await methodGet(`/product/detail/${id}`).catch((e) => {
+                console.log('get product detail failed');
+            });
+            console.log('kq get api get product detail la', rs.data);
+            SetProductDetail(rs?.data);
+        };
+        getProductDetail();
+    }, []);
     return (
         <>
             <Introduce title="Chi tiết sản phẩm" body="Trang chủ / Chi tiết sản phẩm" />
@@ -46,7 +62,7 @@ export default function ProductDetail() {
                             <Space direction="vertical" size="small">
                                 <div className="product_detail">
                                     <h1 className="title">
-                                        Quần Kaki bé trai cạp thun 100% cotton <span className="Price">2990k</span>
+                                        {productDetail?.name} <span className="Price">{productDetail?.price}k</span>
                                     </h1>
                                     <div className="vote">
                                         <FontAwesomeIcon icon={faStar} />
@@ -56,9 +72,9 @@ export default function ProductDetail() {
                                         <FontAwesomeIcon icon={faStar} />
                                     </div>
 
-                                    <h3 className="description">
+                                    {/* <h3 className="description">
                                         Quần khaki dáng regular cạp chung, có túi chéo 2 bên
-                                    </h3>
+                                    </h3> */}
                                     <div className="stt">
                                         <p className="">
                                             Tình trạng : <span className="status">Còn hàng</span>
@@ -71,12 +87,12 @@ export default function ProductDetail() {
                                             name="amount"
                                             rules={[{ type: 'number', max: 10, min: 1, required: true }]}
                                         >
-                                            <InputNumber />
+                                            <InputNumber defaultValue={1} />
                                             <Form.Item name="mausac" label="Màu sắc" rules={[{ required: true }]}>
-                                                <Radio.Group>
-                                                    <Radio value="trang">Trắng</Radio>
-                                                    <Radio value="xanh">Xanh</Radio>
-                                                    <Radio value="den">Đen</Radio>
+                                                <Radio.Group defaultValue={productDetail?.color}>
+                                                    <Radio checked={true} value={productDetail?.color}>
+                                                        {productDetail?.color}
+                                                    </Radio>
                                                 </Radio.Group>
                                             </Form.Item>
                                         </Form.Item>
@@ -122,30 +138,30 @@ export default function ProductDetail() {
                         </div>
                     </Col>
                 </Row>
-                <Mgtop/>
+                <Mgtop />
                 <Row gutter={10}>
-                    <Col xs={8} sm={8} md={8} lg={4} xxl={4} >
-                    <Avatar src='./images/about.jpg'/>
+                    <Col xs={8} sm={8} md={8} lg={4} xxl={4}>
+                        <Avatar src="./images/about.jpg" />
                     </Col>
-                    <Col xs={8} sm={8} md={8} lg={4} xxl={4} >
-                    <Avatar src='./images/about.jpg'/>
+                    <Col xs={8} sm={8} md={8} lg={4} xxl={4}>
+                        <Avatar src="./images/about.jpg" />
                     </Col>
-                    <Col xs={8} sm={8} md={8} lg={4} xxl={4} >
-                    <Avatar src='./images/about.jpg'/>
+                    <Col xs={8} sm={8} md={8} lg={4} xxl={4}>
+                        <Avatar src="./images/about.jpg" />
                     </Col>
-                    <Col xs={8} sm={8} md={8} lg={4} xxl={4} >
-                    <Avatar src='./images/about.jpg'/>
+                    <Col xs={8} sm={8} md={8} lg={4} xxl={4}>
+                        <Avatar src="./images/about.jpg" />
                     </Col>
-                    <Col xs={8} sm={8} md={8} lg={4} xxl={4} >
-                    <Avatar src='./images/about.jpg'/>
+                    <Col xs={8} sm={8} md={8} lg={4} xxl={4}>
+                        <Avatar src="./images/about.jpg" />
                     </Col>
-                    <Col xs={8} sm={8} md={8} lg={4} xxl={4} >
-                    <Avatar src='./images/about.jpg'/>
+                    <Col xs={8} sm={8} md={8} lg={4} xxl={4}>
+                        <Avatar src="./images/about.jpg" />
                     </Col>
                 </Row>
             </div>
-            <Mgtop/>
-            <Footer/>
+            <Mgtop />
+            <Footer />
         </>
     );
 }

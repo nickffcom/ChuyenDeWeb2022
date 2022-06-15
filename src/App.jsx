@@ -23,6 +23,8 @@ import LayoutAdmin from './components/Admin/LayoutAdmin/LayoutAdmin';
 import HomeAdmin from './pages/Admin/HomeAdmin/HomeAdmin';
 
 export default function App() {
+    const checkRole = localStorage.getItem('role');
+    console.log(checkRole);
     return (
         <BrowserRouter>
             <div className="app">
@@ -46,7 +48,7 @@ export default function App() {
                         <Route path="/my-order" element={<MyOrder />} />
                         <Route path="/search/:keywork" element={<Search />} />
                         <Route path="/account-info" element={<AccountInfo />} />
-                        <Route exact path="/product-detail" element={<ProductDetail />} />
+                        <Route path="/product-detail/:id" element={<ProductDetail />} />
                         <Route path="/product" element={<Product />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />

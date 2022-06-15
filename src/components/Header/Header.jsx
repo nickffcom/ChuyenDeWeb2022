@@ -7,12 +7,9 @@ export default function Header() {
     const navigate = useNavigate();
     const [keywork, setKeyWork] = useState('');
     const [checkuser, SetCheckUser] = useState(localStorage.getItem('accessToken'));
-    // const CheckUser = localStorage.getItem('accessToken');
     const [currentUser, SetCurrentUser] = useState(null);
-    // console.log('keywork la', keywork);
 
     const handleLogout = () => {
-        console.log('đã zô log out');
         localStorage.removeItem('User');
         localStorage.removeItem('tokenType');
         localStorage.removeItem('accessToken');
@@ -27,6 +24,7 @@ export default function Header() {
             // có user thì mới call API ,
             const testGet = async () => {
                 const user = await methodGet('/api/user/me');
+                // const user = await methodGet('/cart/getAllListOder');
                 SetCurrentUser(user.data);
                 console.log('check user header', user);
             };
@@ -73,7 +71,7 @@ export default function Header() {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/product-detail">
+                                        <Link className="nav-link" to="/product">
                                             Cửa Hàng
                                         </Link>
                                     </li>

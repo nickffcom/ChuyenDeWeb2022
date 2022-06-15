@@ -56,10 +56,10 @@ export default function Login() {
                 <Form
                     name="basic"
                     labelCol={{
-                        span: 5,
+                        span: 6,
                     }}
                     wrapperCol={{
-                        span: 7,
+                        span: 10,
                     }}
                     initialValues={{
                         remember: true,

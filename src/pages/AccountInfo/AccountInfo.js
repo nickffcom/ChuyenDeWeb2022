@@ -30,6 +30,7 @@ export default function AccountInfo() {
     const onFinish = async (values) => {
         console.log(values);
         const kq = await methodPost('/api/user/update', values).catch((e) => {
+            NotifyError('Lỗi kiểm tra lại');
             console.log('lỗi call api update', e);
         });
         if (kq.data.id) {
