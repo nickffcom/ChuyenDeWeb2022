@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function MoreInformation() {
+export default function MoreInformation({ description }) {
   return (
-    <div>MoreInformation</div>
+    <div className="more-info-description">{description}</div>
   )
 }

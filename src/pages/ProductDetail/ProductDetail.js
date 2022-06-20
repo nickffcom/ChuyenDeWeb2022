@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Col, Divider, Form, InputNumber, Rate, Row, Space } from 'antd';
 
 import '~/pages/ProductDetail/ProductDetail.scss';
@@ -46,6 +46,9 @@ export default function ProductDetail() {
         };
         getProductDetail();
     }, []);
+
+    const [renderComponent, setRenderComponent] = useState();
+    const [active, setActive] = useState(1);
     return (
         <>
             <Introduce title="Chi tiết sản phẩm" body="Trang chủ / Chi tiết sản phẩm" />
@@ -54,7 +57,7 @@ export default function ProductDetail() {
                 <Row gutter={5}>
                     <Col xs={24} sm={24} md={10} lg={10} xxl={10}>
                         <div className="img-product">
-                            <img src="images/about.jpg" alt="Image Product Load Failed" />
+                            <img src="/images/about.jpg" alt="Image Product Load Failed" />
                         </div>
                     </Col>
                     <Col xs={24} sm={24} md={14} lg={14} xxl={14}>
@@ -118,16 +121,22 @@ export default function ProductDetail() {
                     </Col>
                 </Row>
                 <Divider style={{ backgroundColor: '#c3c3c3' }}></Divider>
-                <Link to="/product_detail/themthongtin">Thêm thông tin</Link>
-                <Link to="/product_detail/mieuta">Miêu tả</Link>
-                <Link to="/product_detail/danhgia">Đánh giá</Link>
-                <Row>
+                <div className="menu-detail">
+                    {/* <Link to="/product_detail/themthongtin">Thêm thông tin</Link>
+                    <Link to="/product_detail/mieuta">Miêu tả</Link>
+                    <Link to="/product_detail/danhgia">Đánh giá</Link> */}
+                    <div className={`menu-detail-item ${active === 1 ? "active" : "" }`} onClick={() => {setRenderComponent(<MoreInformation />); setActive(1)}}>Thêm thông tin</div>
+                    <div className={`menu-detail-item ${active === 2 ? "active" : "" }`} onClick={() => {setRenderComponent(<Description description={productDetail.description} />);setActive(2)}}>Miêu tả</div>
+                    <div className={`menu-detail-item ${active === 3 ? "active" : "" }`} onClick={() => {setRenderComponent(<Vote />); setActive(3)}}>Đánh giá</div>
+                </div>
+                <Row className="more-detail-container">
                     <Col xs={24} sm={24} md={24} lg={24}></Col>
-                    <Routes>
+                    {renderComponent}
+                    {/* <Routes>
                         <Route path="/product_detail/themthongtin" element={<MoreInformation />}></Route>
                         <Route path="/product_detail/mieuta" element={<Description />}></Route>
                         <Route path="/product_detail/danhgia" element={<Vote />}></Route>
-                    </Routes>
+                    </Routes> */}
                 </Row>
                 <Row>
                     <Col>

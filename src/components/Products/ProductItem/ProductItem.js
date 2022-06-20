@@ -15,7 +15,7 @@ export default function ProductItem({ score, id, img, name }) {
     return (
         <div className="swiper-item">
             <div className="swiper-item-img">
-                <img src="./images/about.jpg" alt='"Ảnh sản phẩm loading....' />
+                <img src={img} alt='"Ảnh sản phẩm loading....' />
                 <div className="swiper-item-other">
                     <div className="swiper-item-other-add">
                         <Button danger icon={<FontAwesomeIcon icon={faAdd} />}>
@@ -31,8 +31,11 @@ export default function ProductItem({ score, id, img, name }) {
             </div>
             <div className="swiper-item-body">
                 <div className="title">
-                    <h5 className="text-item">{name}</h5>
-                    <h2 className="text-item price-sale">29900</h2>
+                    <h5 className="text-item product__text-name">{name}</h5>
+                    <div className="product-item-content-container">
+                        <h3 className="price-old text-item">30900đ</h3>
+                        <h2 className="text-item price-sale">29900đ</h2>
+                    </div>
                 </div>
                 <div className="love">
                     <div className="vote text-item">
@@ -43,7 +46,6 @@ export default function ProductItem({ score, id, img, name }) {
                         <FontAwesomeIcon icon={faStar} />
                         <FontAwesomeIcon icon={faStar} />
                     </div>
-                    <h3 className="price-old text-item">2490</h3>
                 </div>
             </div>
         </div>

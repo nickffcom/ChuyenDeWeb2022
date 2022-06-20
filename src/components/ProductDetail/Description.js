@@ -1,7 +1,9 @@
 import React from 'react'
+import './Description.scss';
 
-export default function Description() {
+export default function Description({ description }) {
   return (
-    <div>description</div>
+    <div className="more-info-description">{description}</div>
   )
 }
+

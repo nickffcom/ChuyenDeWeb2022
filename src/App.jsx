@@ -25,6 +25,7 @@ import HomeAdmin from './pages/Admin/HomeAdmin/HomeAdmin';
 export default function App() {
     const checkRole = localStorage.getItem('role');
     console.log(checkRole);
+    console.log("abcccccccccccccc");
     return (
         <BrowserRouter>
             <div className="app">
@@ -37,6 +38,7 @@ export default function App() {
                     <Header />
                     <Mgtop />
                     <Routes>
+                        <Route exact path="/" element={<Home />} />
                         <Route path="/admin" element={<LayoutAdmin />}>
                             <Route path="home" element={<HomeAdmin />} />
                             <Route path="*" element={<NotFound />} />
@@ -54,7 +56,7 @@ export default function App() {
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/info-shop" element={<InfoShop />} />
                         <Route path="*" element={<NotFound />} />
-                        <Route exact path="/" element={<Home />} />
+                        
                     </Routes>
                 </div>
             </div>
