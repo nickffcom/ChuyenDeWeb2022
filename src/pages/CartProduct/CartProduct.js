@@ -113,7 +113,7 @@ export default function CartProduct() {
                                                         <td className="product-quantity">
                                                             <input
                                                                 type="number"
-                                                                value={quantity}
+                                                                value={item?.quantity}
                                                                 onChange={(e) => {
                                                                     if (e.target.value < 1) {
                                                                         NotifyError('Vui lòng chọn số lượng hợp lệ');
