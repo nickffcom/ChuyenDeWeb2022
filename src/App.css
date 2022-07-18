@@ -1,0 +1,17 @@
+.App .navbar-vertical-fixed {
+  margin-left: 0;
+  z-index: 0;
+}
+
+.navbar-vertical-aside-has-menu .nav-item--show {
+  display: block;
+}
+.page-index{
+  padding: 7px 25px;
+  /* margin: 0px 10px; */
+  background-color: #c3c3c3;
+}
+.active-index{
+  background-color: aliceblue;
+  color: black;
+}
